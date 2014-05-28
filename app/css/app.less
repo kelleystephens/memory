@@ -1,9 +1,53 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-body{
-  background-image: url('../media/bg.svg');
+body {
+  background-image: url('../media/colorful-background.jpg');
+}
+
+h1 {
+  color: white;
+  width: 135px;
+  margin: auto;
+  padding: 10px;
+  font-size: 60px;
+  text-decoration: underline;
+  text-shadow: 2px 3px 2px black;
+}
+
+.container {
+  width: 125px;
+  height: 125px;
+  -webkit-perspective: 1000;
+  border: 1px solid black;
+}
+
+.flipper, .front, .back {
+  width: 100%;
+  height: 100%;
+}
+
+.flipper {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition-duration: 1s;
+  position: relative;
+}
+
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+}
+
+.front {
+  z-index: 3;
+}
+
+.back {
   background-size: cover;
-  background-attachment: fixed;
+  -webkit-transform: rotateY(180deg);
+}
+
+.rotate {
+  -webkit-transform: rotateY(180deg);
 }
 
 html, button, input, select, textarea,
@@ -12,43 +56,9 @@ html, button, input, select, textarea,
   font-family: 'Open Sans', sans-serif;
 }
 
-.button-success,
-.button-error,
-.button-warning,
-.button-secondary {
-  color: white;
-  border-radius: 4px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.button-success {
-  background: rgb(82, 227, 101);
-}
-
-.button-error {
-  background: rgb(210, 115, 78);
-}
-
-.button-warning {
-  background: rgb(223, 117, 20);
-}
-
-.button-secondary {
-  background: rgba(108, 67, 223, 0.55);
-}
-
-.button-xsmall {
-  font-size: 50%;
-}
-
-.button-small {
-  font-size: 85%;
-}
-
-.button-large {
-  font-size: 110%;
-}
-
-.button-xlarge {
-  font-size: 150%;
+#clock {
+  border: 1px solid black;
+  display: inline-block;
+  width: 70px;
+  height: 40px;
 }
