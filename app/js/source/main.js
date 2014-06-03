@@ -72,14 +72,14 @@
 
 
   function reveal(){
-    var row = $(this).parent().index;
+    var row = $(this).parent().index();
     var col = $(this).index();
-    var pos = (row *4) + col;
+    var pos = (row * 4) + col;
     var img = numbers[pos];
 
-    $(this).find('.back').css('background-image', 'url("./media/cat' + img + 'png")');
+    $(this).find('.back').css('background-image', 'url("./media/cat' + img + '.png")');
     $(this).find('.flipper').addClass('rotate');
-    $(this). addClass('show');
+    $(this).addClass('show');
     checkMatch();
   }
 
@@ -90,7 +90,7 @@
       var td1 = $matches[0];
       var td2 = $matches[1];
       var img1 = $(td1).find('.back').css('background-image');
-      var img2 = $(td2).find('back').css('background-image');
+      var img2 = $(td2).find('.back').css('background-image');
 
       if(img1 === img2){
         $matches.addClass('match');

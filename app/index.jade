@@ -11,98 +11,20 @@ html(lang='en')
     h1 Memory
     #controls
       button#start Start
-      #clock(data-time = '60') 60
+      #clock(data-time = '75') 75
 
 
     .pure-g
       .pure-u-1
         table#board.pure-table.pure-table-bordered
           tbody
-            tr
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-            tr
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-            tr
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-            tr
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-              td.container
-                .flipper
-                  .front
-                  .back
-
+            - for(var i = 0; i <5; i++)
+              tr
+                - for(var j = 0; j <4; j++)
+                  td
+                    .flipper
+                      .front
+                      .back
 
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/source/main.js')
